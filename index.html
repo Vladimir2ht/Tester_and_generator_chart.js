@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Анализ графиков</title>
+	<!-- <link rel="icon" href="office.ico"> -->
+	<link href="main.css" rel="stylesheet" type="text/css"/>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+	<div class="withTwoParts">
+		<div class="generator">
+			<h2>Генератор графиков</h2>
+
+			<div class="inputContainer">
+				<label>Значение начала оси x:</label>
+				<input type="number" id="x1" />
+			</div>
+		
+			<div class="inputContainer">
+				<label>Количество точек:</label>
+				<input type="number" id="dotsCount" />
+			</div>
+			
+			<div class="graphicContainer">
+				<div class="inputContainer">
+					<label>Значение y первой точки:</label>
+					<input type="number" class="y1" />
+				</div>
+
+				<div class="withTwoParts">
+					<button class="addPoint">Добавить точку</button>
+					<table>
+						<thead>
+							<tr>
+								<th>X </th>
+								<th>Y</th>
+								<th>Вне графика</th>
+							</tr>
+						</thead>
+						<tbody></tbody> 
+					</table>
+				</div>
+				
+				<div class="inputContainer">
+					<label>Значение y последней точки:</label>
+					<input type="number" class="y2" />
+				</div>
+
+				<div class="inputContainer">
+					<label>Случайное отклонение по у:</label>
+					<div class="inputSelect">
+						<input type="number" class="delta" />
+						<select>
+							<option>число</option>
+							<option>%</option>
+						</select>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="secondGraph">
+				<label>Второй график</label>
+				<input type="checkbox" id="secondGraph"/>
+			</div>
+
+			<div class="graphicContainer">
+				<div class="inputContainer">
+					<label>Значение y первой точки:</label>
+					<input type="number" class="y1" />
+				</div>
+
+				<div class="withTwoParts">
+					<button class="addPoint">Добавить точку</button>
+					<table>
+						<thead>
+							<tr>
+								<th>X </th>
+								<th>Y</th>
+								<th>Вне графика</th>
+							</tr>
+						</thead>
+						<tbody></tbody> 
+					</table>
+				</div>
+					
+				<div class="inputContainer">
+					<label>Значение y последней точки:</label>
+					<input type="number" class="y2" />
+				</div>
+				
+				<div class="inputContainer">
+					<label>Случайное отклонение по у:</label>
+					<div class="inputSelect">
+						<input type="number" class="delta" />
+						<select>
+							<option>число</option>
+							<option>%</option>
+						</select>
+					</div>
+				</div>
+									
+				<button id="updateChart">Обновить график</button>
+
+			</div>
+
+
+    </div>
+
+		<div>
+			<h2>Проверка графиков</h2>
+			<div class="inputContainer">
+				<label>Допустимое отклонение:</label>
+				<div class="inputSelect">
+					<input type="number" min="0" id="permissible"/>
+					<select>
+						<option>число</option>
+						<option>%</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="withTwoParts">
+				<div>
+					<input type="checkbox" id="checkInGraph"/>
+					<label>Внутри графика</label>
+				</div>
+
+				<div>
+					<input type="checkbox" id="checkBetweenGraph"/>
+					<label>Между графиками</label>
+				</div>
+			</div>
+
+			<button id="checkButton">Проверить график</button>
+		
+			<div class="false message">
+				<span>&#9888;</span>
+				График(и) имеют отклонение больше допустимого.
+			</div>
+			
+			<div class="true message">
+				<span>&#9989;</span> График(и) соответствуют допустимому отклонению. 
+			</div>
+		
+		</div>
+
+	</div>
+
+	<div class="chartСontainer">
+		<canvas id="myChart"></canvas>
+	</div>
+
+	<script src="main.js"></script>
+  
+</body>
+</html>

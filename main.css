@@ -1,0 +1,129 @@
+:root{
+	--verticalIndent: 10px;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.chartСontainer {
+	margin: auto;
+	width: 100%;
+}
+
+.withTwoParts {
+	display: flex;
+  justify-content: space-between;
+	align-items: center;
+}
+
+.inputContainer {
+	display: flex;
+  justify-content: start;
+	/* align-items: center; */
+}
+
+.inputContainer label {
+	margin-right: 10px;
+}
+
+.inputSelect {
+	display: flex;
+	max-height: 27px;
+}
+
+.inputSelect input {
+	margin-right: 10px;
+}
+
+.generator {
+	margin-right: 3%;
+}
+
+body > div > div > div:not(.graphicContainer), .graphicContainer > div {
+	margin-bottom: var(--verticalIndent);
+}
+
+.addPoint {
+	max-height: 100px;
+	margin-right: 5px;
+}
+
+th {
+	font-size: 90%;
+}
+
+td {
+	vertical-align: middle;
+	text-align: center;
+	padding: 0 5px;
+}
+
+td input {
+	width: 100%;
+	box-sizing: border-box;
+	min-width: 40px;
+	size: unset;
+}
+
+td span {
+	font-size: 72%;
+	position: relative;
+	bottom: -2px;
+	cursor: pointer;
+}
+
+.secondGraph {
+	padding-top: 10px;
+}
+
+.secondGraph label {
+	font-size: 120%;
+	font-weight: 650;
+}
+
+#checkButton {
+	margin-bottom: var(--verticalIndent);
+}
+
+.message {
+	border-style: solid;
+	border-radius: 5px;
+	display: none;
+	padding: 5px;
+}
+
+.false {
+  background-color: #ffabab;
+  border-color: #df0000;
+	padding-top: 0px;
+}
+
+.true {
+  background-color: #abffab;
+  border-color: #00df00;
+}
+
+.false span {
+  color: #900000;
+	font-size: 140%;
+}
+
+.active {
+	display: block;
+}
+
+.message span {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+@media (max-width: 954px) {
+	.inputContainer {
+		flex-direction: column;
+	}
+	.inputContainer > input {
+		margin-right: auto;
+	}
+}
