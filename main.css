@@ -1,4 +1,4 @@
-:root{
+:root {
 	--verticalIndent: 10px;
 }
 
@@ -6,20 +6,20 @@ body {
 	font-family: sans-serif;
 }
 
-.chartСontainer {
+.chartContainer {
 	margin: auto;
 	width: 100%;
 }
 
 .withTwoParts {
 	display: flex;
-  justify-content: space-between;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .inputContainer {
 	display: flex;
-  justify-content: start;
+	justify-content: start;
 	/* align-items: center; */
 }
 
@@ -40,7 +40,8 @@ body {
 	margin-right: 3%;
 }
 
-body > div > div > div:not(.graphicContainer), .graphicContainer > div {
+body > div > div > div:not(.graphicContainer),
+.graphicContainer > div {
 	margin-bottom: var(--verticalIndent);
 }
 
@@ -94,18 +95,18 @@ td span {
 }
 
 .false {
-  background-color: #ffabab;
-  border-color: #df0000;
+	background-color: #ffabab;
+	border-color: #df0000;
 	padding-top: 0px;
 }
 
 .true {
-  background-color: #abffab;
-  border-color: #00df00;
+	background-color: #abffab;
+	border-color: #00df00;
 }
 
 .false span {
-  color: #900000;
+	color: #900000;
 	font-size: 140%;
 }
 
@@ -114,9 +115,9 @@ td span {
 }
 
 .message span {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
 }
 
 @media (max-width: 954px) {
